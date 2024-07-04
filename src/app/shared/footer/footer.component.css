@@ -1,0 +1,18 @@
+.footer_container {
+  /* background-image: url(../images/footer-bg.png); */
+  background-size: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 245px;
+  margin-top: -175px;
+}
+
+.info_section {
+  color: #ffffff;
+  padding: 45px 0;
+  background-color:  #CE7043;
+}
+section {
+  display: block;
+}

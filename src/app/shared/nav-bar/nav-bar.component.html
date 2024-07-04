@@ -1,0 +1,42 @@
+<!-- header section strats -->
+
+<header class="header_section">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg custom_nav-container">
+      <a class="navbar-brand" href="index.html">
+            <span>
+              GuidingEagle
+            </span>
+      </a>
+
+      <div class="" id="">
+        <div class="User_option">
+          <a href="/">
+            <span>Home</span>
+          </a>
+          <a href="/packages"  >
+            <span>Packages</span>
+          </a>
+          <a href="/guides">
+            <span>Guides</span>
+          </a>
+        </div>
+        <div #menuButton class="custom_menu-btn">
+          <button (click)="openNav()">
+            <img src="./assets/images/menu.png" alt="">
+          </button>
+        </div>
+        <div id="myNav" #menu class="overlay">
+          <div class="overlay-content">
+            <a href="/">Home</a>
+            <a href="/guides">Guides</a>
+            <a href="/contact">Contact</a>
+            <a href="/sign-up">Sign up</a>
+            <a href="/sign-in">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- end header section -->

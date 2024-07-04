@@ -1,0 +1,24 @@
+<form>
+  <div class="row form-row">
+    <div class="form-group col-lg-5">
+      <select name="cityId" class="form-control" id="inputHotel" placeholder="Search city" [(ngModel)]="filter.cityId" >
+        <option [value]="''" selected>Select a city</option>
+        @for (city of cities; track city) {
+          <option [value]="city.id">{{city.name}}</option>
+        }
+      </select>
+
+    </div>
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+      <input name="date" class="form-control" placeholder="Select date" type="text" bsDatepicker [(ngModel)]="filter.date"/>
+    </div>
+    <div class="form-group col-lg-3 d-flex align-items-center">
+      <div class="btn-box">
+        <button type="submit" class="btn" (click)="doSearch()">Search</button>
+      </div>
+      <div *ngIf="filter && (filter.date || filter.cityId)" class="text-primary ml-3 px-2" style="cursor: pointer">
+        <i (click)="clearSearch()" class="fa fa-remove fa-2x"></i>
+      </div>
+    </div>
+  </div>
+</form>

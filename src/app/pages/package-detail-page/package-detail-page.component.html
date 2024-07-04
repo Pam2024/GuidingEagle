@@ -1,0 +1,60 @@
+
+<div class="hero_area inner_page">
+
+  <app-nav-bar></app-nav-bar>
+</div>
+
+
+<header id="home" class="header">
+  <div class="overlayy"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="header-content">
+          <div *ngIf="item.id">
+            <h1 class="header-title">
+              <span class="up">Welcome!</span><br>
+              <span class="down">This is package {{item.name}} </span>
+            </h1>
+            <h2>Top Package </h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="about-img-holder">
+          <img [src]="environment.apiBaseUrl + item.imagePath + '/' + item.imageName " class="about-img" alt="Description">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<!-- About section -->
+<div class="about container mt-4" >
+  <div class="about-caption"  >
+    <h2 class="section-title mb-3">About Me</h2>
+    <p>
+      {{item.description}}
+    </p>
+  </div>
+</div>
+<section class="section-sm mt-4 mb-4" style="background-color: #CE7043;">
+  <!-- container -->
+  <div class="container text-center text-sm-left">
+    <!-- row -->
+    <div class="row align-items-center">
+      <div class="col-sm offset-md-1 mb-4 mb-md-0">
+        <h6 class="title text-light">Do you want to buy this package?</h6>
+      </div>
+      <div class="col-sm offset-sm-2 offset-md-3">
+        <a href="/hire" ><button type="button" class="btn btn-lg my-font btn-light rounded" >Choose me</button></a>
+
+      </div>
+    </div> <!-- end of row -->
+  </div> <!-- end of container -->
+</section>
+
+
+
+

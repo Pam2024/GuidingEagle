@@ -1,0 +1,15 @@
+<ngx-slick-carousel class="slider_container"
+                    #slickModal="slick-carousel"
+                    [config]="slideConfig"
+                    (init)="slickInit($event)"
+                    (breakpoint)="breakpoint($event)"
+                    (afterChange)="afterChange($event)"
+                    (beforeChange)="beforeChange($event)">
+
+  @for (slide of slides; track slide) {
+    <div ngxSlickItem class="item">
+      <img class="img-box" [src]="environment.apiBaseUrl + slide.imagePath + '/' + slide.imageName " alt="" width="100%">
+    </div>
+  }
+</ngx-slick-carousel>
+
